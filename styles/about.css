@@ -41,6 +41,7 @@
   height: 498px;
   margin-top: -5rem;
   width: 25%;
+  margin-bottom: 10rem;
 }
 
 
@@ -49,19 +50,13 @@
   clear: both;
 }
 
-footer p {
-    font-family: "Raleway", arial, sans-serif;
-    color: #fdfdfd;
-    text-align: right;
-    float: right;
-    padding-right: 60px;
-    text-decoration: none;
-    font-size: 17px;
-    display: inline;
-    vertical-align: middle;
-    font-weight: bold;
+footer {
+	  overflow: hidden;
+    padding: 4rem 0 0 0;
+    bottom: 3rem;
+    position: fixed;
+    width:100%;
 }
-
 
 @media screen and (max-width: 599px) and (min-width: 320px) {
   html {

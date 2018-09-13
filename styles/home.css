@@ -5,16 +5,13 @@ html {
 body {
   display: block;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-image: url("../images/bright_bulb.png");
   background-color: #FFFFFF;
   background-repeat: no-repeat;
   background-position: right top;
-  min-height: 100%;
-}
-
-.workheader {
-  position: relative;
-  margin: 0 5.6rem;
 }
 
 .main-container {
@@ -23,64 +20,42 @@ body {
   text-align: center;
 }
 
-.main-container img{
-  opacity: .7;
-  width: 100%;
-  margin-bottom: -.5rem;
-}
-
 .main-text {
-  padding-top: 10rem;
-  padding-left: 10rem;
-  top: 50%;
+  padding: 30rem 0 0 0;
+  margin: 0;
   transform: translateY(-50%);
-  position: fixed;
 }
 
 .mobile-text {
-  padding-top: 3rem;
+  padding-top: 20rem;
   top: 50%;
   transform: translateY(-50%);
-  position: absolute;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
 }
 
 .main p {
   text-align: left;
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-family: "Raleway", arial, sans-serif;
   font-weight: 100;
   padding: 0 0 0 17.8rem;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
+}
+
+.work-button {
+  float: left;
+  padding: 3rem 0 0 17.8rem;
+  margin: 0;
 }
 
 p {
   font-size: 1.6rem;
   margin-top: -1.5rem;
   margin-bottom: 2.2rem;
-}
-
-.gallery {
-  padding: 0 0 0 1rem;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 .4rem;
-}
-
-.column {
-  flex: 33%;
-  max-width: 33%;
-  padding: 0 3.8rem;
-
-}
-
-.column img {
-  margin-top: 1.2rem;
-  vertical-align: middle;
-  width: 100%;
 }
 
 .content{
@@ -90,43 +65,27 @@ p {
 .content h3 {
     color: #3F3250;
     font-weight: bold;
-    font-family: "Titillium Web", arial, sans-serif;
+    font-family: "Raleway", arial, sans-serif;
     font-size: 2rem;
     margin-top: 1rem;
     padding: 0 0 2rem;
 }
 
-footer p:first-child {
-    font-family: "Raleway", arial, sans-serif;
-    color: #3F3250;
-    text-align: left;
-    padding-left: 2rem;
-    text-decoration: none;
-    font-size: 1.7rem;
-    display: inline;
-    vertical-align: middle;
-    font-weight: bold;
-    padding-left: 6rem;
+footer {
+	  overflow: hidden;
+    padding: 4rem 0 0 0;
+    bottom: 3rem;
+    position: fixed;
+    width:100%;
 }
 
-footer p:nth-child(2){
-    font-family: "Raleway", arial, sans-serif;
-    color: #3F3250;
-    padding-right: 2rem;
-    text-decoration: none;
-    float: right;
-    display: inline;
-    vertical-align: middle;
-    font-size: 1.7rem;
-    margin: 0;
-    padding-right: 6rem;
-}
 
 /* small screen  */
 @media screen and (max-width: 599px) and (min-width: 320px) {
-  .column {
-    min-width: 100%;
-    flex: 100%;
+  body {
+    background-image: url("../images/bright_bulb_mobile.png");
+    overflow: hidden;
+    background-position: top center;
   }
   .main h2 {
     margin-top: 5.8rem;
@@ -137,29 +96,20 @@ footer p:nth-child(2){
     font-size: 18px;
     padding: 0 56px;
   }
-  .main-container img {
-    width: auto;
-    height: 42rem;
-    position: relative;
-    right: 925px;
-  }
 .topnav .nav {
 padding-right: 0
 }
-footer p:first-child {
-  visibility: hidden;
-}
-footer p:first-child(2) {
-  align-items: center;
+.work-button {
+  padding: 3rem 0 0 5.8rem;
 }
 }
 
   /* medium screen */
   @media screen and (max-width: 959px) and (min-width: 600px) {
-    .column {
-      min-width: 100%;
-      flex: 100%;
-    }
+    body {
+      background-position: top;
+      background-size: 170%;
+}
     .main h2 {
       font-size: 38px;
       padding: 0 56px;
@@ -168,23 +118,12 @@ footer p:first-child(2) {
       font-size: 22px;
       padding: 0 56px;
     }
-  footer p:first-child {
-    visibility: hidden;
-  }
-  .main-container img {
-    width: 100%;
-    height: 45rem;
-  }
   .main-text, .mobile-text {
     padding-top: 0
   }
 }
 
 @media screen and (min-width: 960px) {
-  .column {
-    min-width: 33%;
-    flex: 33%;
-  }
   .main-container img {
     width: 100%;
     height: 45rem;

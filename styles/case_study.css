@@ -73,7 +73,7 @@ body {
   font-size: 4.8rem;
   color: #458355;
   font-family: "Raleway", arial, sans-serif;
-  font-weight: bold;
+  font-weight: 400;
   margin-bottom: 1rem;
 }
 
@@ -82,7 +82,7 @@ body {
   font-size: 4.8rem;
   color: #3F3250;
   font-family: "Raleway", arial, sans-serif;
-  font-weight: bold;
+  font-weight: 400;
   margin-bottom: 1rem;
 }
 
@@ -93,16 +93,15 @@ body {
 }
 
 section {
-  padding: 6rem 0;
+  padding: 10rem 0;
 }
 
 .top {
-  padding-bottom: 6rem
+  padding-bottom: 10rem
 }
 
 .box {
-  background-color: #F6E9D4;
-
+  background-color: #FBF4EA;
   display: block;
   clear: both;
 }
@@ -135,7 +134,7 @@ section {
   font-size: 8.2rem;
   color: #458355;
   font-family: "Raleway", arial, sans-serif;
-  font-weight: bold;
+  font-weight: 400;
   margin: 0;
   width: 35%;
   padding-right: 2rem;
@@ -162,7 +161,8 @@ section {
   font-size: 2rem;
   line-height: 2.3rem;
   font-family: "Raleway", arial, sans-serif;
-  font-weight: bolder;
+  font-weight: 500;
+
   color: #3F3250;
   clear: left;
   text-align: left;
@@ -220,7 +220,7 @@ section {
   font-size: 2.5rem;
   color: #458355;
   font-family: "Raleway", arial, sans-serif;
-  font-weight: bold;
+  font-weight: 400;
   padding: .5rem 0;
   padding-top: 1rem;
 }
@@ -250,7 +250,7 @@ section {
   margin-right: 10px;
   font-size: 2rem;
   font-family: "Raleway", arial, sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   width: 20%;
   text-align: right;
 }
@@ -308,6 +308,28 @@ section {
   padding: 0 22rem;
   grid-template-areas: 'bottom bottom right'
                         'bottom bottom right';
+}
+
+.gallery {
+  padding: 0 0 0 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 .4rem;
+}
+
+.column {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 3.8rem;
+}
+
+.column img {
+  margin-top: 1.2rem;
+  vertical-align: middle;
+  width: 100%;
 }
 
 .gallery-grid {
@@ -393,22 +415,24 @@ grid-template-columns: 250px 250px 250px;
 
 
 input[type=button] {
-    background-color: #458355;
-    color: white;
+    background-color: #FFB149;
+    color: black;
+    font-family: "Raleway", arial, sans-serif;
     font-size: 1.8rem;
-    padding: 1.2rem 2rem;
+    padding: 2.2rem 6rem;
     border: none;
-    border-radius: .4rem;
+    border-radius: 8rem;
     cursor: pointer;
 }
 
 .styleguide button{
-    background-color: #458355;
-    color: white;
+    background-color: #FFB149;
+    color: black;
+    font-family: "Raleway", arial, sans-serif;
     font-size: 1.8rem;
-    padding: 1.2rem 2rem;
+    padding: 1.2rem 6rem;
     border: none;
-    border-radius: .4rem;
+    border-radius: 8rem;
     cursor: pointer;
 }
 
@@ -429,22 +453,30 @@ input[type=button] {
   padding-bottom: 1rem;
 }
 
-footer p:first-child {
+footer {
+	  overflow: hidden;
+    padding: 4rem 0 0 0;
+    position: sticky;
+    width:100%;
+    bottom: 3rem;
+}
+
+footer p:nth-child(2){
     font-family: "Raleway", arial, sans-serif;
-    color: #fdfdfd;
+    color: #3F3250;
     text-align: left;
     padding-left: 2rem;
     text-decoration: none;
     font-size: 1.7rem;
     display: inline;
     vertical-align: middle;
-    font-weight: bold;
+    font-weight: 600;
     padding-left: 6rem;
 }
 
-footer p:nth-child(2){
+footer p:nth-child(3){
     font-family: "Raleway", arial, sans-serif;
-    color: #fdfdfd;
+    color: #3F3250;
     padding-right: 2rem;
     text-decoration: none;
     float: right;
@@ -459,6 +491,10 @@ footer p:nth-child(2){
 
 /* small screen  */
 @media screen and (max-width: 599px) and (min-width: 320px) {
+  .column {
+    min-width: 100%;
+    flex: 100%;
+}
   html {
     font-size: 70%;
   }
@@ -634,10 +670,10 @@ footer p:first-child {
 
 /* medium screen */
 @media screen and (max-width: 959px) and (min-width: 600px) {
-  .workheader {
-    visibility: hidden;
-    margin: 0;
-  }
+  .column {
+  min-width: 100%;
+  flex: 100%;
+}
   .aboutProject-image img:nth-child(3), .aboutProject-image img:nth-child(2) {
     display: none;
   }
@@ -711,6 +747,7 @@ footer p:first-child {
     text-align: center;
     grid-column: 1;
     grid-row: 1;
+    font-weight: 400;
   }
   .competitiveAnalysis-image img{
     height: auto;
@@ -798,6 +835,10 @@ footer p:first-child {
 }
 
 @media screen and (min-width: 1024px) {
+  .column {
+  min-width: 33%;
+  flex: 33%;
+}
   .grid-container {
     width: 65%;
   }
