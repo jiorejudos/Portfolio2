@@ -4,6 +4,10 @@
   padding-top: 0;
 }
 
+body {
+background: #ECEAEC;
+}
+
 .aboutBio {
   display: block;
   clear: both;

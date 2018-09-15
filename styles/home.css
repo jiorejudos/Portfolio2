@@ -80,6 +80,8 @@ footer {
 }
 
 
+
+
 /* small screen  */
 @media screen and (max-width: 599px) and (min-width: 320px) {
   body {
@@ -110,22 +112,39 @@ padding-right: 0
       background-position: top;
       background-size: 170%;
 }
-    .main h2 {
-      font-size: 38px;
-      padding: 0 56px;
-    }
-    .main p {
+    .main {
       font-size: 22px;
-      padding: 0 56px;
+      padding: 20rem 0;
+      margin-left: -10rem;
     }
   .main-text, .mobile-text {
     padding-top: 0
   }
+  .mobile-text{
+    display: none;
+    visibility: hidden;
+  }
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (max-width: 1024px) and (min-width: 960px) {
+  body {
+    background-position: top;
+    background-size: 170%;
+}
+.main {
+  font-size: 70%;
+}
+}
+
+
+@media screen and (min-width: 1024px) {
   .main-container img {
     width: 100%;
     height: 45rem;
   }
+  .mobile-text{
+    display: none;
+    visibility: hidden;
+  }
+
 }

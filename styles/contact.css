@@ -4,6 +4,10 @@
   padding-top: 0;
 }
 
+body {
+  background: #ECEAEC;
+}
+
 .main p {
   text-align: left;
   font-size: 1.8rem;
@@ -66,12 +70,14 @@ table {
 
 .contactInfo {
     border-radius: 5px;
-    margin: 0 56px;
+    margin: 0 26px;
     font-family: "Raleway", arial, sans-serif;
     padding-bottom: 50px;
 }
 .contactInfo p {
   margin-left: 137px;
+  font-size: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .contactInfo form {
   margin-left: 122px;
@@ -88,6 +94,33 @@ footer p {
     font-size: 17px;
     display: inline;
     vertical-align: middle;
+}
+
+footer p:nth-child(2){
+    font-family: "Raleway", arial, sans-serif;
+    color: #3F3250;
+    text-align: left;
+    padding-left: 2rem;
+    float: left;
+    text-decoration: none;
+    font-size: 1.7rem;
+    display: inline;
+    vertical-align: middle;
+    font-weight: bold;
+    padding-left: 6rem;
+}
+
+footer p:nth-child(3){
+    font-family: "Raleway", arial, sans-serif;
+    color: #3F3250;
+    padding-right: 2rem;
+    text-decoration: none;
+    float: right;
+    display: inline;
+    vertical-align: middle;
+    font-size: 1.7rem;
+    margin: 0;
+    padding-right: 6rem;
 }
 
 @media screen and (max-width: 599px) and (min-width: 320px) {

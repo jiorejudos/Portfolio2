@@ -192,6 +192,7 @@ footer p:nth-child(3){
   padding: 0 3.8rem;
 }
 
+
 @media screen and (max-width: 599px) and (min-width: 320px) {
   .column {
   min-width: 100%;
@@ -208,6 +209,7 @@ footer p:nth-child(3){
   }
   .main-text {
     display: none;
+    visibility: hidden;
   }
 .logo {
   padding-left: 2rem;
@@ -296,6 +298,7 @@ html {
     }
     .mobile-text{
       display: none;
+      visibility: hidden;
     }
     p:first-child(2) {
      visibility: hidden;
@@ -305,6 +308,7 @@ html {
 @media screen and (min-width: 600px){
   .mobile-text{
     display: none;
+    visibility: hidden;
   }
     }
 
@@ -312,6 +316,10 @@ html {
 @media screen and (min-width: 1000px){
   .logo h1 {
   height: 8rem;
+}
+.mobile-text{
+  display: none;
+  visibility: hidden;
 }
 }
 
