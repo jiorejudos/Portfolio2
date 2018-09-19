@@ -28,6 +28,9 @@ hr {
     border-width: .5px;
 }
 
+header {
+  cursor: pointer;
+}
 .topnav a {
   text-decoration: none;
 }
