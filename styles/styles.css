@@ -205,8 +205,9 @@ footer p:nth-child(3){
   }
   .dropbtn{
     margin-top: 10px;
+    cursor: pointer;
   }
-  .main {
+  .work-button {
     cursor: pointer;
   }
   .main-text {
