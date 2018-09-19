@@ -3,3 +3,13 @@
 $('.burger').on("click", function() {
   $('.ul').slideToggle("fast");
 });
+
+jQuery ( document ).ready( function($) {
+
+setTimeout ( function() {
+
+$('a[href*="#"]').off('touchstart touchend');
+
+} , 750 );
+
+} );
