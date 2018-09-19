@@ -96,6 +96,7 @@ footer {
     padding: 0 4rem;
     align-items: center;
     text-align: center;
+    cursor: pointer;
   }
 .topnav .nav {
 padding-right: 0
