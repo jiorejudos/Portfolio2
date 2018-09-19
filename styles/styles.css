@@ -50,11 +50,10 @@ hr {
   text-decoration: none;
   margin-top: 4rem;
   margin-right: 2rem;
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-family: "Raleway", arial, sans-serif;
   background-color: inherit;
     color: #3F3250;
-    font-size: 24px;
     border: none;
     cursor: pointer;
 }
@@ -251,10 +250,6 @@ footer p:nth-child(3){
     .logo img {
       height: 8.1rem;
       width: auto;
-    }
-    .workheader img{
-      visibility: hidden;
-      margin-bottom: -5rem;
     }
     footer p:nth-child(2) {
       visibility: hidden;
