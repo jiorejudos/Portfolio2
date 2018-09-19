@@ -1,4 +1,12 @@
+document.onclick = function () {
+	// change div
+}
+div.onclick = function () {}
 
-document.getElementById("button").addEventListener("click", displayDate);
-
-button.addEventListener('click', function() {}, false );
+document.onclick = function () {
+	var newDiv = document.createElement('div');
+	// populate div
+	newDiv.onclick = function () {};
+	document.body.appendChild(newDiv);
+}
+div.onclick = function () {}
