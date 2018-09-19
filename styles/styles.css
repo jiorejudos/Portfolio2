@@ -206,6 +206,9 @@ footer p:nth-child(3){
   .dropbtn{
     margin-top: 10px;
   }
+  .main {
+    cursor: pointer;
+  }
   .main-text {
     display: none;
     visibility: hidden;
