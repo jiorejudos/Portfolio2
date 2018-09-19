@@ -10,13 +10,3 @@ document.onclick = function () {
 	document.body.appendChild(newDiv);
 }
 div.onclick = function () {}
-
-jQuery ( document ).ready( function($) {
-
-setTimeout ( function() {
-
-$('a[href*="#"]').off('touchstart touchend');
-
-} , 750 );
-
-} );
