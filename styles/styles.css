@@ -189,25 +189,9 @@ a {
 
 
 a:hover {
-    background-color: #FFBD66;
-}
-
-.topnav h1:hover {
-    color: #FFBD66;
-}
-
-li:active {
-    text-decoration-color: #458355;
-}
-
-li:hover {
   background-color: #FFBD66;
 }
 
-.topnav h1:active {
-    color: white;
-    text-decoration-color: #458355;
-}
 
 .logo {
   position: absolute;
@@ -237,7 +221,7 @@ li:hover {
     z-index: 1;
 }
 
-input[type=button] {
+.button input[type=button]{
     background-color: #FFB149;
     color: black;
     font-family: "Raleway", arial, sans-serif;
