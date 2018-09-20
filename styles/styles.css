@@ -49,50 +49,146 @@ header {
   font-weight: 400;
 }
 
-.dropbtn {
+a {
   text-decoration: none;
   margin-top: 4rem;
   margin-right: 2rem;
   font-size: 2rem;
   font-family: "Raleway", arial, sans-serif;
   background-color: inherit;
-    color: #3F3250;
+    color: white;
     border: none;
     cursor: pointer;
 }
 
-.dropdown {
-    float: right;
-    padding: 0 5rem;
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
+#menuToggle
+{
+  display: block;
+  position: relative;
+  right: 5rem;
+  float: right;
+  top: -6rem;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #3F3250;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: white;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+ #menu
+{
+ position: absolute;
+ width: 300px;
+ margin: -100px 0 0 0;
+ padding: 100px;
+ padding-top: 125px;
+ right: -100px;
+ text-align: right;
+ background: #3F3250;
+ opacity: .9;
+ list-style-type: none;
+ -webkit-font-smoothing: antialiased;
+ /* to stop flickering of text in safari */
+
+ transform-origin: 0% 0%;
+ transform: translate(100%, 0);
+
+ transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
 }
 
 
-.dropdown-content {
-    width: 300px;
-    padding: 2rem;
-    text-align: center;
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #3F3250;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-  font-size: 1.4rem;
-  font-family: "Raleway", arial, sans-serif;
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
+a:hover {
     background-color: #FFBD66;
 }
 
@@ -100,20 +196,11 @@ header {
     color: #FFBD66;
 }
 
-.dropdown-content a:active {
-    color: white;
+li:active {
     text-decoration-color: #458355;
 }
 
-.dropdown-content a {
-  text-decoration: none;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
+li:hover {
   background-color: #FFBD66;
 }
 
@@ -161,10 +248,6 @@ input[type=button] {
     cursor: pointer;
 }
 
-.burger {
-  display: none;
-}
-
 footer p:nth-child(2){
     font-family: "Raleway", arial, sans-serif;
     color: #3F3250;
@@ -197,44 +280,6 @@ footer p:nth-child(3){
   padding: 0 3.8rem;
 }
 
-.nav-toggle {
-	@include user-select;
-	cursor: pointer;
-	height: 5rem * $nav-toggle-bar-height;
-	left: 2rem;
-	position: fixed;
-	top: 2rem;
-	width: $nav-toggle-bar-width;
-	z-index: $z-nav-toggle;
-  &:hover { opacity: 0.8; }
-
-	.nav-toggle-bar,
-	.nav-toggle-bar::after,
-	.nav-toggle-bar::before {
-		@include center-vertically;
-		@include transition(all 0.5s ease);
-		background: $nav-toggle-bar-color;
-		content: '';
-		height: $nav-toggle-bar-height;
-		width: 100%;
-	}
-	.nav-toggle-bar { margin-top: 0; }
-	.nav-toggle-bar::after { margin-top: 2 * $nav-toggle-bar-height; }
-	.nav-toggle-bar::before { margin-top: -2 * $nav-toggle-bar-height; }
-	&.expanded .nav-toggle-bar { background: transparent; }
-	&.expanded .nav-toggle-bar::after,
-	&.expanded .nav-toggle-bar::before {
-		background: $nav-color;
-		margin-top: 0;
-	}
-	&.expanded .nav-toggle-bar::after { @include transform(rotate(45deg)); }
-	&.expanded .nav-toggle-bar::before { @include transform(rotate(-45deg)); }
-}
-
-.nav {
-	@include transition(left 0.5s ease);
-}
-
 
 @media screen and (max-width: 599px) and (min-width: 320px) {
   .column {
@@ -247,9 +292,8 @@ footer p:nth-child(3){
   hr {
     margin-top: 6rem;
   }
-  .dropbtn{
-    margin-top: 10px;
-    cursor: pointer;
+#menuToggle{
+    top: 0;
   }
   .work-button {
     cursor: pointer;
