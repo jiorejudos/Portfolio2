@@ -63,6 +63,7 @@ header {
 
 .dropdown {
     float: right;
+    padding: 0 5rem;
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -194,6 +195,44 @@ footer p:nth-child(3){
   flex: 33%;
   max-width: 33%;
   padding: 0 3.8rem;
+}
+
+.nav-toggle {
+	@include user-select;
+	cursor: pointer;
+	height: 5rem * $nav-toggle-bar-height;
+	left: 2rem;
+	position: fixed;
+	top: 2rem;
+	width: $nav-toggle-bar-width;
+	z-index: $z-nav-toggle;
+  &:hover { opacity: 0.8; }
+
+	.nav-toggle-bar,
+	.nav-toggle-bar::after,
+	.nav-toggle-bar::before {
+		@include center-vertically;
+		@include transition(all 0.5s ease);
+		background: $nav-toggle-bar-color;
+		content: '';
+		height: $nav-toggle-bar-height;
+		width: 100%;
+	}
+	.nav-toggle-bar { margin-top: 0; }
+	.nav-toggle-bar::after { margin-top: 2 * $nav-toggle-bar-height; }
+	.nav-toggle-bar::before { margin-top: -2 * $nav-toggle-bar-height; }
+	&.expanded .nav-toggle-bar { background: transparent; }
+	&.expanded .nav-toggle-bar::after,
+	&.expanded .nav-toggle-bar::before {
+		background: $nav-color;
+		margin-top: 0;
+	}
+	&.expanded .nav-toggle-bar::after { @include transform(rotate(45deg)); }
+	&.expanded .nav-toggle-bar::before { @include transform(rotate(-45deg)); }
+}
+
+.nav {
+	@include transition(left 0.5s ease);
 }
 
 
