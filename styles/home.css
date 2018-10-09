@@ -80,12 +80,16 @@ footer {
 }
 
 
+
+
+
 /* small screen  */
 @media screen and (max-width: 599px) and (min-width: 320px) {
   body {
-    background-image: url("../images/bright_bulb_mobile.png");
+    background-image: url("../images/bright_bulb_mobile1.png");
     overflow: hidden;
     background-position: top center;
+    background-size: cover;
   }
   .main {
     padding: 0;

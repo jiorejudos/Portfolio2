@@ -338,8 +338,9 @@ footer p:nth-child(3){
     footer p:nth-child(2) {
       visibility: hidden;
     }
-    footer p:nth-child(3){{
-      align-items: center;
+    footer p:nth-child(3){
+      margin: auto;
+      width: 75%;
     }
 }
 
