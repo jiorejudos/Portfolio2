@@ -332,6 +332,10 @@ section {
   width: 100%;
 }
 
+.testing_paragraph {
+  padding-top: 8rem;
+}
+
 .gallery-grid {
   align-self: center;
   justify-content: center;
