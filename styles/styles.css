@@ -61,6 +61,7 @@ a {
     cursor: pointer;
 }
 
+
 #menuToggle
 {
   display: block;
@@ -229,7 +230,7 @@ a {
    white-space: nowrap;
 }
 
-input[type=button]{
+.work-button{
     background-color: #FFB149;
     color: black;
     font-family: "Raleway", arial, sans-serif;
@@ -239,6 +240,46 @@ input[type=button]{
     border-radius: 8rem;
     cursor: pointer;
 }
+
+.gallery {
+  padding: 0 0 0 1rem;
+  float: left;
+  margin-bottom: 10rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 .4rem;
+}
+
+.column {
+  align-content: center;
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 3.8rem;
+  margin-bottom: 4rem;
+}
+
+.column img {
+  margin-top: 1.2rem;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.content{
+    font-family: "Raleway", arial, sans-serif;
+}
+
+.content h3 {
+    color: #3F3250;
+    font-weight: bold;
+    font-family: "Raleway", arial, sans-serif;
+    font-size: 2rem;
+    margin-top: 1rem;
+    padding: 0 0 2rem;
+}
+
 
 footer p:nth-child(2){
     font-family: "Raleway", arial, sans-serif;
@@ -274,6 +315,10 @@ footer p:nth-child(3){
 
 
 @media screen and (max-width: 599px) and (min-width: 320px) {
+  .topnav {
+    height: 0;
+    margin: -1rem;
+  }
   .column {
   min-width: 100%;
   flex: 100%;
@@ -344,46 +389,46 @@ footer p:nth-child(3){
     }
 }
 
-  /* medium screen */
+/* medium screen */
 @media screen and (max-width: 959px) and (min-width: 600px) {
-  .column {
-  min-width: 100%;
-  flex: 100%;
+ .column {
+ min-width: 100%;
+ flex: 100%;
 }
-  .logo {
-    padding-left: 2rem;
-  }
+ .logo {
+   padding-left: 2rem;
+ }
 .topnav h1 {
-  padding-left: 10.8rem;
-  line-height: 2.8rem;
-  font-size: 2.8rem;
+ padding-left: 10.8rem;
+ font-size: 2.8rem;
+ height: 0;
 }
-      .burger {
-  display: inline-block;
+     .burger {
+ display: inline-block;
 }
 .burger:hover {
-  cursor: pointer;
+ cursor: pointer;
 }
 html {
-        font-size: 80%;
-      }
+       font-size: 80%;
+     }
 
-      .logo h1 {
-      left: 3.5rem;
-      height: 8rem;
-    }
-    .logo img {
-      height: 7.9rem;
-      width: auto;
-    }
-    .mobile-text{
-      display: none;
-      visibility: hidden;
-    }
-    p:first-child(2) {
+     .logo h1 {
+     left: 3.5rem;
+     height: 8rem;
+   }
+   .logo img {
+     height: 7.9rem;
+     width: auto;
+   }
+   .mobile-text{
+     display: none;
      visibility: hidden;
-    }
-    }
+   }
+   p:first-child(2) {
+    visibility: hidden;
+   }
+   }
 
 @media screen and (min-width: 600px){
   .mobile-text{

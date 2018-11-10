@@ -1,17 +1,19 @@
 <!DOCTYPE html>
+
 <html>
 <head>
   <title>Jeannine Orejudos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type= "text/css" href = "styles/reset.css">
   <link rel="stylesheet" type= "text/css" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700|Titillium+Web:400,600">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" type= "text/css" link href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" type= "text/css" href = "styles/styles.css">
   <link rel="stylesheet" type= "text/css" href = "styles/home.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script></head>
-<body>
-  <div class="fade">
+
+<body data-spy="scroll" data-target="#top">
+  <div class="hero-image">
   <div class="logo">
     <a href="index.html"><img src="images/jo_logo_new.png" alt="logo" /></a>
 </div>
@@ -26,7 +28,6 @@
         <span></span>
         <ul id="menu">
           <a href="index.html"><li>Home</li></a>
-      <a href="work.html"><li>Work</li></a>
       <a href="about.html"><li>About</li></a>
       <a href="contact.html"><li>Contact</li></a>
     </ul>
@@ -43,13 +44,9 @@
           <p>based in Charlottesville, VA.</p>
         <p>I enjoy designing things that </p>
           <p>are simple and elegant.</p>
-          <div class= "work-button">
+          <div class= "work-button" id="div">
             <div class="button">
-              <a href="work.html">
-                <div class="grow">
-                <input type="button" value="View Work">
-              </a>
-            </div>
+              <a href="#work" id="button" class="btn btn-primary btn-lg" role="button">View Work<span class="fas fa-chevron-down"></span></a>
       </div>
     </div>
     </div>
@@ -63,14 +60,65 @@
           that are simple and elegant.</p>
             <div class= "work-button" id="div">
               <div class="button">
-                <a href="work.html">
-                  <button type="button">View Work</button>
-                </a>
+                  <a href="#work" id="button" class="btn btn-primary btn-lg" role="button">View Work<span class="fas fa-chevron-down"></span></a>
               </div>
             </div>
             </div>
           </div>
-  </div>
+        </div>
+      </div>
+
+
+
+
+
+  <div class="gallery" id="work">
+   <div class="row">
+     <div class="column">
+       <div class="content">
+         <a href="case_study_marco.html"><img src="images/marco.png" alt="marco" /></a>
+         <h3>Marco</h3>
+         <p>A mobile app for planning roadtrips.</p>
+       </div>
+     </div>
+     <div class="column">
+       <div class="content">
+         <a href="case_study.html"><img src="images/tidbit.png" alt="tidbit" /></a>
+         <h3>tidbit</h3>
+         <p>A mobile app to search for nearby foodtrucks.</p>
+       </div>
+     </div>
+     <div class="column">
+       <div class="content">
+         <a href="uplift_case_study.html"><img src="images/uplift.png" alt="Uplift"/></a>
+         <h3>Uplift</h3>
+         <p>A crowdfunding website for missions and ministries.</p>
+       </div>
+     </div>
+     <div class="column">
+       <div class="content">
+         <a href="cozy_toes_case_study.html"><img src="images/cozytoes.png" alt="Cozy Toes"></a>
+         <h3>Cozy Toes</h3>
+         <p>An online store that sells fun, fashionable socks.</p>
+       </div>
+     </div>
+     <div class="column">
+       <div class="content">
+         <a href="fit_case_study.html"><img src="images/fitforlife.png" alt="Fit for Life" ></a>
+         <h3>Graphic Design</h3>
+         <p>Here are some of my graphic design projects.</p>
+       </div>
+     </div>
+   <div class="column">
+     <div class="content">
+       <a href="hulk_case_study.html"><img src="images/hulk.png" alt="Hulk" /></a>
+       <h3>Newspaper Design</h3>
+       <p>Here is some of my newspaper design work.</p>
+     </div>
+   </div>
+</div>
+</div>
+
 
 
     <footer>
@@ -85,7 +133,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-121206613-1');
     </script>
 

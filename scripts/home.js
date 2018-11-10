@@ -9,4 +9,12 @@ document.onclick = function () {
 	newDiv.onclick = function () {};
 	document.body.appendChild(newDiv);
 }
-div.onclick = function () {} 
+div.onclick = function () {}
+
+
+$(function() {
+	 $('.scroll-down').click (function() {
+		 $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
+		 return false;
+	 });
+ });
