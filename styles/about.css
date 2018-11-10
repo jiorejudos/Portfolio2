@@ -39,6 +39,29 @@ background: #ECEAEC;
   margin-bottom: 20px;
 }
 
+.fa {
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.fa-linkedin {
+  padding-left:25rem;
+    color: #3B5998;
+}
+
+.fa-github {
+  padding-left:5rem;
+    color: black;
+}
+
+
+.fa:hover {
+    opacity: 0.7;
+}
+
 .headshot {
   display: inline-block;
   float: left;
@@ -83,6 +106,10 @@ footer {
   width: 100%;
   height: 100%;
 }
+.fa-linkedin {
+  padding-left: 10rem;
+  padding-bottom: 5rem;
+}
 footer {
   margin-top: 1rem;
 }
@@ -98,6 +125,8 @@ footer {
   .aboutBio-text, .headshot {
   margin-top: -4rem;
 }
+.fa-linkedin {
+  padding-left:5rem;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1200px){
