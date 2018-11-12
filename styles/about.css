@@ -122,21 +122,36 @@ footer {
   .aboutheader {
     margin-left: 2.6rem;
   }
-  .aboutBio-text, .headshot {
-  margin-top: -4rem;
+  .topnav {
+    height: 15rem;
+
+  }
+  .aboutBio-text {
+  margin-top: 0;
+  margin-left: 0;
+  width: 60%;
+}
+.headshot {
+  margin-left: 0;
+  margin-top: 0;
 }
 .fa-linkedin {
   padding-left:5rem;
 }
+.icon {
+  margin-bottom: 10rem;
+}
+}
 
-@media screen and (min-width: 1024px) and (max-width: 1200px){
+@media screen and (min-width: 959px) and (max-width: 1200px){
   .main {
     padding-top: 5rem;
   }
   .aboutheader {
     margin-left: 5.6rem;
   }
-  .aboutBio-text p{
-    margin-left: 2rem;
+  .aboutBio-text {
+    margin-left: 0;
+    width: 70%;
   }
 }

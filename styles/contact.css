@@ -131,16 +131,16 @@ footer p:nth-child(3){
     visibility: hidden;
     margin: 0;
   }
-  .contactInfo {
+  .contactInfo{
     margin: 0 24px;
   }
-  .contactInfo p {
+  .contactInfo p{
     margin-left: 0;
     margin-top: 2rem;
-    width: 100%
+    width: 100%;
   }
   .contactInfo form {
-    margin-left: -1rem
+    margin-left: -1rem;
   }
 label {
   font-size: 1.4rem;
@@ -154,13 +154,31 @@ footer {
   html {
     font-size: 80%;
   }
+  .logo {
+    padding-left: 4rem;
+  }
   .contactheader {
     margin-left: 2.6rem;
   }
   .contactInfo {
     margin: 0 36px;
   }
+  .contactInfo p{
+    margin-left: 40px;
+  }
+  .contactInfo form {
+    margin-left: 20px;
+  }
   .main p {
     margin-top: -10rem;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 959px){
+  .contactInfo p{
+    margin-left: 40px;
+  }
+  .contactInfo form {
+    margin-left: 20px;
   }
 }
