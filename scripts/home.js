@@ -18,3 +18,12 @@ $(function() {
 		 return false;
 	 });
  });
+
+
+ function addContent() {
+   var c = '';
+   for (var i = 0; i < 10; i++) {
+       c += '<a class="box"></a>';
+   }
+   $("#container").append(c);
+}
