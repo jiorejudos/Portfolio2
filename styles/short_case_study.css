@@ -8,6 +8,7 @@
 
 .gallery {
   padding: 0 0 0 1rem;
+  float: none;
 }
 
 .row {
